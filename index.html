@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Details</title>
+    <link rel="stylesheet" href="./imdex.css">
+</head>
+
+<body>
+
+    <div class="Container">
+        <div class="section">
+            <div class="sub-Container">
+                <img src="./assets/_CCS5510 (1).svg" alt="Image 1">
+                <span class="title">
+                    <h1>Holistic <span class="color"> Development</span></h1>
+                </span>
+                <span class="details">
+                    <h1>Holistic <span class="color"> Development</span></h1>
+                    <p>Right Mix of Curricular and Co-Curricular Activities.</p>
+                </span>
+            </div>
+            <div class="sub-Container">
+                <img src="./assets/_CCS5510 (2).svg" alt="Image 2">
+                <div class="title">
+                    <h1><span class="color">Proven</span> and <span class="color">Tested</span> Centralized Curriculum
+                    </h1>
+                </div>
+                <span class="details">
+                    <h1><span class="color">Proven</span> and <span class="color">Tested</span> Centralized Curriculum
+                    </h1>
+                    <p>CBSE school with balanced traditional & contemporary curriculum to foster growth
+                        in
+                        all its students</p>
+                </span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="sub-Container">
+                <img src="./assets/_CCS5510 (3).svg" alt="Image 3">
+                <div class="title">
+                    <h1><span class="color">Innovative</span> and <span class="color">Challening</span>
+                        learning Methodologies</h1>
+                </div>
+                <span class="details">
+                    <h1><span class="color">Innovative</span> and <span class="color">Challening</span>
+                        learning Methodologies</h1>
+                    <p>Facilitate excellence through critical thinking and profound learning.</p>
+                </span>
+            </div>
+            <div class="sub-Container">
+                <img src="./assets/_CCS5510.svg" alt="Image 4">
+                <div class="title">
+                    <h1><span class="color">Faculty</span> Enrichment Program</h1>
+                </div>
+                <span class="details">
+                    <h1><span class="color">Faculty</span> Enrichment Program</h1>
+                    <p>teacher training and curriculum workshops</p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const images = document.querySelectorAll('img');
+        const discs = document.querySelectorAll('.details');
+
+        images.forEach(image => {
+            image.addEventListener('mouseover', () => {
+                const title = image.nextElementSibling;
+                title.style.display = 'none';
+            });
+
+            image.addEventListener('mouseout', () => {
+                const title = image.nextElementSibling;
+                title.style.display = 'block';
+            });
+        });
+
+        discs.forEach(disc => {
+            disc.addEventListener('mouseover', () => {
+                const title = disc.previousElementSibling;
+                title.style.display = 'none';
+            });
+
+            disc.addEventListener('mouseout', () => {
+                const title = disc.previousElementSibling;
+                title.style.display = 'block';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
